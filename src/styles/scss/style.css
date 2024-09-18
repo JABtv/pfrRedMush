@@ -30,13 +30,13 @@ header p {
   text-align: center;
   font-family: "Oswald";
   font-size: 0.8rem;
-  padding: 1em;
+  padding: 0.2em;
 }
 header nav.navbar {
-  padding: 0 2em 0 2em;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
+  padding: 0 2em 0 2em;
 }
 header nav.navbar div {
   display: flex;
@@ -48,8 +48,10 @@ header nav.navbar div.right {
   gap: 1em;
 }
 header nav.navbar img {
-  height: 30px;
+  height: 40px;
   cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
 header nav.navbar img.iconLogo {
   height: 5rem;
@@ -60,12 +62,82 @@ header nav.navbar h1 {
   cursor: pointer;
 }
 
+main article.carousel {
+  background-color: white;
+}
+main article.carousel div.slider {
+  width: 100dvw;
+  max-width: 100dvw;
+  height: 85dvh;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+main article.carousel div.carouselList {
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: 1s;
+}
+main article.carousel div.carouselList img {
+  width: 100dvw;
+  max-width: 100dvw;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main article.carousel div.carouselBtn {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+main article.carousel div.carouselBtn button {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-family: "Oswald";
+  cursor: pointer;
+  border: 1px white solid;
+}
+main article.carousel ul.dots {
+  position: absolute;
+  bottom: 10px;
+  color: white;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+main article.carousel ul.dots li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  margin: 20px;
+  transition: 1s;
+  cursor: pointer;
+  background-color: black;
+  border: 1px white solid;
+}
+main article.carousel ul.dots li.active {
+  width: 30px;
+  background-color: #d71c10;
+}
+
 @media screen and (max-width: 1080px) {
-  header p {
-    font-size: 0.8rem;
-    padding: 1em;
-  }
   header nav.navbar {
+    padding: 0 1em 0 1em;
     background-color: #fff;
     display: flex;
     text-align: center;
@@ -75,7 +147,7 @@ header nav.navbar h1 {
     height: 30px;
   }
   header nav.navbar img.iconLogo {
-    height: 5rem;
+    height: 3rem;
     width: auto;
   }
   header nav.navbar h1 {

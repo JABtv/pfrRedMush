@@ -1,5 +1,5 @@
-let slider = document.querySelector(".slider .carousselList");
-let items = document.querySelectorAll(".slider .carousselList .carousselItems");
+let slider = document.querySelector(".slider .carouselList");
+let items = document.querySelectorAll(".slider .carouselList .carouselItems");
 let next = document.getElementById("next");
 let prev = document.getElementById("prev");
 let dots = document.querySelectorAll(".slider .dots li");
