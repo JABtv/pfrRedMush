@@ -21,6 +21,15 @@
   background-color: #292929;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald";
+}
+
 header {
   background-color: #000;
   width: 100%;
@@ -62,10 +71,10 @@ header nav.navbar h1 {
   cursor: pointer;
 }
 
-main article.carousel {
+main section.carousel {
   background-color: white;
 }
-main article.carousel div.slider {
+main section.carousel article.slider {
   width: 100dvw;
   max-width: 100dvw;
   height: 85dvh;
@@ -73,7 +82,7 @@ main article.carousel div.slider {
   position: relative;
   overflow: hidden;
 }
-main article.carousel div.carouselList {
+main section.carousel div.carouselList {
   position: absolute;
   width: -moz-max-content;
   width: max-content;
@@ -83,14 +92,14 @@ main article.carousel div.carouselList {
   display: flex;
   transition: 1s;
 }
-main article.carousel div.carouselList img {
+main section.carousel div.carouselList img {
   width: 100dvw;
   max-width: 100dvw;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main article.carousel div.carouselBtn {
+main section.carousel div.carouselBtn {
   position: absolute;
   top: 45%;
   left: 5%;
@@ -98,7 +107,7 @@ main article.carousel div.carouselBtn {
   display: flex;
   justify-content: space-between;
 }
-main article.carousel div.carouselBtn button {
+main section.carousel div.carouselBtn button {
   width: 25px;
   height: 25px;
   background-color: black;
@@ -108,7 +117,7 @@ main article.carousel div.carouselBtn button {
   cursor: pointer;
   border: 1px white solid;
 }
-main article.carousel ul.dots {
+main section.carousel ul.dots {
   position: absolute;
   bottom: 10px;
   color: white;
@@ -119,7 +128,7 @@ main article.carousel ul.dots {
   display: flex;
   justify-content: center;
 }
-main article.carousel ul.dots li {
+main section.carousel ul.dots li {
   list-style: none;
   width: 10px;
   height: 10px;
@@ -130,9 +139,38 @@ main article.carousel ul.dots li {
   background-color: black;
   border: 1px white solid;
 }
-main article.carousel ul.dots li.active {
+main section.carousel ul.dots li.active {
   width: 30px;
   background-color: #d71c10;
+}
+main section.nouveaute {
+  background-color: gray;
+  margin: 1em;
+}
+main section.nouveaute article.container {
+  display: flex;
+}
+main section.nouveaute article.container div.card {
+  width: 250px;
+  height: 350px;
+  border: 1px #000 solid;
+}
+main section.nouveaute article.container div.card div.img {
+  width: 200px;
+  height: 300px;
+}
+main section.nouveaute article.container div.card div.img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section.nouveaute article.container div.card h3 {
+  font-weight: bold;
+}
+main section.nouveaute article.container div.card p {
+  -moz-columns: #d71c10;
+       columns: #d71c10;
 }
 
 @media screen and (max-width: 1080px) {
