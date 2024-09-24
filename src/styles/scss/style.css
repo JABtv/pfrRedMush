@@ -30,6 +30,45 @@ h6 {
   font-family: "Oswald";
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  font-family: "Noto_Sans";
+}
+
+button {
+  border: none;
+  border: 1px #000 solid;
+  background-color: #000;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 header {
   background-color: #000;
   width: 100%;
@@ -38,7 +77,7 @@ header p {
   color: #fff;
   text-align: center;
   font-family: "Oswald";
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 0.2em;
 }
 header nav.navbar {
@@ -71,18 +110,18 @@ header nav.navbar h1 {
   cursor: pointer;
 }
 
-main section.carousel {
+section.carousel {
   background-color: white;
 }
-main section.carousel article.slider {
+section.carousel article.slider {
   width: 100dvw;
-  max-width: 100dvw;
+  max-width: 100%;
   height: 85dvh;
   margin: auto;
   position: relative;
   overflow: hidden;
 }
-main section.carousel div.carouselList {
+section.carousel div.carouselList {
   position: absolute;
   width: -moz-max-content;
   width: max-content;
@@ -92,14 +131,14 @@ main section.carousel div.carouselList {
   display: flex;
   transition: 1s;
 }
-main section.carousel div.carouselList img {
+section.carousel div.carouselList img {
   width: 100dvw;
   max-width: 100dvw;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main section.carousel div.carouselBtn {
+section.carousel div.carouselBtn {
   position: absolute;
   top: 45%;
   left: 5%;
@@ -107,7 +146,7 @@ main section.carousel div.carouselBtn {
   display: flex;
   justify-content: space-between;
 }
-main section.carousel div.carouselBtn button {
+section.carousel div.carouselBtn button {
   width: 25px;
   height: 25px;
   background-color: black;
@@ -117,7 +156,7 @@ main section.carousel div.carouselBtn button {
   cursor: pointer;
   border: 1px white solid;
 }
-main section.carousel ul.dots {
+section.carousel ul.dots {
   position: absolute;
   bottom: 10px;
   color: white;
@@ -128,7 +167,7 @@ main section.carousel ul.dots {
   display: flex;
   justify-content: center;
 }
-main section.carousel ul.dots li {
+section.carousel ul.dots li {
   list-style: none;
   width: 10px;
   height: 10px;
@@ -139,38 +178,63 @@ main section.carousel ul.dots li {
   background-color: black;
   border: 1px white solid;
 }
-main section.carousel ul.dots li.active {
+section.carousel ul.dots li.active {
   width: 30px;
   background-color: #d71c10;
 }
-main section.nouveaute {
-  background-color: gray;
-  margin: 1em;
+
+section.nouveaute {
+  margin: 3em 2em 3em 2em;
 }
-main section.nouveaute article.container {
+section.nouveaute article.container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
 }
-main section.nouveaute article.container div.card {
-  width: 250px;
-  height: 350px;
+section.nouveaute article.container div.card {
   border: 1px #000 solid;
+  height: 33em;
+  width: 17.188em;
 }
-main section.nouveaute article.container div.card div.img {
-  width: 200px;
-  height: 300px;
+section.nouveaute article.container div.card div.cardContent {
+  padding: 1em;
 }
-main section.nouveaute article.container div.card div.img img {
+section.nouveaute article.container div.card div.cardContent img.preview {
+  height: 23em;
   width: 100%;
+}
+section.nouveaute article.container div.card div.cardContent p {
+  color: #d71c10;
+  font-family: "Oswald";
+  font-size: 2.25rem;
+}
+section.nouveaute article.container div.card div.cardContent div.btn {
+  display: flex;
+  justify-content: space-between;
+}
+section.nouveaute article.container div.card div.cardContent div.btn div.colors [id^=btn] {
+  height: 30px;
+  width: 30px;
+}
+section.nouveaute article.container div.card div.cardContent div.btn div.colors #btnWhite {
+  background-color: #fff;
+}
+section.nouveaute article.container div.card div.cardContent div.btn div.colors #btnBlack {
+  background-color: #000;
+}
+section.nouveaute article.container div.card div.cardContent div.btn div.colors #btnRed {
+  background-color: #d71c10;
+}
+section.nouveaute article.container div.card div.cardContent div.btn #btnShop {
+  height: 30px;
+  width: 50px;
+}
+section.nouveaute article.container div.card div.cardContent div.btn #btnShop img {
   height: 100%;
+  width: auto;
   -o-object-fit: cover;
-     object-fit: cover;
-}
-main section.nouveaute article.container div.card h3 {
-  font-weight: bold;
-}
-main section.nouveaute article.container div.card p {
-  -moz-columns: #d71c10;
-       columns: #d71c10;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 1080px) {

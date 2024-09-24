@@ -1,22 +1,22 @@
 //initialization
 
 @font-face {
-    font-family: "Oswald";
-    src: url("../../../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf")
-        format("truetype");
+  font-family: "Oswald";
+  src: url("../../../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf")
+    format("truetype");
 }
 
 @font-face {
-    font-family: "Noto_Sans";
-    src: url("../../../assets/fonts/Noto_Sans-Oswald/Noto_Sans/NotoSans.ttf")
-        format("truetype");
+  font-family: "Noto_Sans";
+  src: url("../../../assets/fonts/Noto_Sans-Oswald/Noto_Sans/NotoSans.ttf")
+    format("truetype");
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
 // Colors
@@ -27,22 +27,22 @@ $tertiary: #d71c10;
 
 // Typography
 
-$h1-font-size: 3.5rem;
-$h2-font-size: 3rem;
-$h3-font-size: 2.5rem;
-$h4-font-size: 2rem;
-$h5-font-size: 1.5rem;
+$h1-font-size: 3rem;
+$h2-font-size: 2.25rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
 $h6-font-size: 1rem;
-$p-font-size: 0.8rem;
+$p-font-size: 1rem;
 
 //Themes
 
 .theme-light {
-    background-color: $primary;
+  background-color: $primary;
 }
 
 .theme-dark {
-    background-color: $secondary;
+  background-color: $secondary;
 }
 
 // Communs
@@ -53,188 +53,251 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Oswald";
+  font-family: "Oswald";
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+h2 {
+  font-size: $h2-font-size;
+}
+h3 {
+  font-size: $h3-font-size;
+}
+h4 {
+  font-size: $h4-font-size;
+}
+h5 {
+  font-size: $h5-font-size;
+}
+h6 {
+  font-size: $h6-font-size;
+}
+
+p {
+  font-size: $p-font-size;
+  font-family: "Noto_Sans";
+}
+
+button {
+  border: none;
+  border: 1px #000 solid;
+  background-color: #000;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 // Navbar
 
 header {
-    background-color: #000;
-    width: 100%;
+  background-color: #000;
+  width: 100%;
 
-    p {
-        color: #fff;
-        text-align: center;
-        font-family: "Oswald";
-        font-size: $p-font-size;
-        padding: 0.2em;
+  p {
+    color: #fff;
+    text-align: center;
+    font-family: "Oswald";
+    font-size: $p-font-size;
+    padding: 0.2em;
+  }
+
+  nav.navbar {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em 0 2em;
+    div {
+      display: flex;
+      text-align: center;
+      align-items: center;
     }
 
-    nav.navbar {
-        background-color: #fff;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 2em 0 2em;
-        div {
-            display: flex;
-            text-align: center;
-            align-items: center;
-        }
-
-        div.left,
-        div.right {
-            gap: 1em;
-        }
-
-        img {
-            height: 40px;
-            cursor: pointer;
-            padding: 0;
-            margin: 0;
-        }
-
-        img.iconLogo {
-            height: 5rem;
-            width: auto;
-        }
-
-        h1 {
-            font-family: "Oswald";
-            cursor: pointer;
-        }
+    div.left,
+    div.right {
+      gap: 1em;
     }
+
+    img {
+      height: 40px;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+    }
+
+    img.iconLogo {
+      height: 5rem;
+      width: auto;
+    }
+
+    h1 {
+      font-family: "Oswald";
+      cursor: pointer;
+    }
+  }
 }
 
 // Carroussel
 
-main {
-    section.carousel {
-        background-color: white;
-        article.slider {
-            width: 100dvw;
-            max-width: 100dvw;
-            height: 85dvh;
-            margin: auto;
-            position: relative;
-            overflow: hidden;
-        }
-        div.carouselList {
-            position: absolute;
-            width: max-content;
-            height: 100%;
-            left: 0;
-            top: 0;
-            display: flex;
-            transition: 1s;
-        }
-        div.carouselList img {
-            width: 100dvw;
-            max-width: 100dvw;
-            height: 100%;
-            object-fit: cover;
-        }
-        div.carouselBtn {
-            position: absolute;
-            top: 45%;
-            left: 5%;
-            width: 90%;
-            display: flex;
-            justify-content: space-between;
-        }
-        div.carouselBtn button {
-            width: 25px;
-            height: 25px;
-            background-color: black;
-            color: white;
-            border: none;
-            font-family: "Oswald";
-            cursor: pointer;
-            border: 1px white solid;
-        }
-        ul.dots {
-            position: absolute;
-            bottom: 10px;
-            color: white;
-            left: 0;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
+section.carousel {
+  background-color: white;
+  article.slider {
+    width: 100dvw;
+    max-width: 100%;
+    height: 85dvh;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  div.carouselList {
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+  }
+  div.carouselList img {
+    width: 100dvw;
+    max-width: 100dvw;
+    height: 100%;
+    object-fit: cover;
+  }
+  div.carouselBtn {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  div.carouselBtn button {
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-family: "Oswald";
+    cursor: pointer;
+    border: 1px white solid;
+  }
+  ul.dots {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  ul.dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    margin: 20px;
+    transition: 1s;
+    cursor: pointer;
+    background-color: black;
+    border: 1px white solid;
+  }
+  ul.dots li.active {
+    width: 30px;
+    background-color: $tertiary;
+  }
+}
+
+// Section nouveaute
+
+section.nouveaute {
+  margin: 3em 2em 3em 2em;
+  article.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+
+    div.card {
+      border: 1px #000 solid;
+      height: 33em;
+      width: 17.188em;
+      div.cardContent {
+        padding: 1em;
+
+        img.preview {
+          height: 23em;
+          width: 100%;
         }
 
-        ul.dots li {
-            list-style: none;
-            width: 10px;
-            height: 10px;
-            background-color: white;
-            margin: 20px;
-            transition: 1s;
-            cursor: pointer;
-            background-color: black;
-            border: 1px white solid;
+        p {
+          color: $tertiary;
+          font-family: "Oswald";
+          font-size: $h2-font-size;
         }
-        ul.dots li.active {
-            width: 30px;
-            background-color: $tertiary;
-        }
-    }
 
-    section.nouveaute {
-        background-color: gray;
-        margin: 1em;
-        article.container {
-            display: flex;
-
-            div.card {
-                width: 250px;
-                height: 350px;
-                border: 1px #000 solid;
-
-                div.img {
-                    width: 200px;
-                    height: 300px;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-
-                h3 {
-                    font-weight: bold;
-                }
-
-                p {
-                    columns: $tertiary;
-                }
+        div.btn {
+          display: flex;
+          justify-content: space-between;
+          div.colors {
+            [id^="btn"] {
+              height: 30px;
+              width: 30px;
             }
+
+            #btnWhite {
+              background-color: #fff;
+            }
+            #btnBlack {
+              background-color: #000;
+            }
+            #btnRed {
+              background-color: $tertiary;
+            }
+          }
+
+          #btnShop {
+            height: 30px;
+            width: 50px;
+            img {
+              height: 100%;
+              width: auto;
+              -o-object-fit: cover;
+              object-fit: cover;
+            }
+          }
         }
+      }
     }
+  }
 }
 
 @media screen and (max-width: 1080px) {
-    header {
-        nav.navbar {
-            padding: 0 1em 0 1em;
-            background-color: #fff;
-            display: flex;
-            text-align: center;
-            align-items: center;
+  header {
+    nav.navbar {
+      padding: 0 1em 0 1em;
+      background-color: #fff;
+      display: flex;
+      text-align: center;
+      align-items: center;
 
-            img {
-                height: 30px;
-            }
+      img {
+        height: 30px;
+      }
 
-            img.iconLogo {
-                height: 3rem;
-                width: auto;
-            }
+      img.iconLogo {
+        height: 3rem;
+        width: auto;
+      }
 
-            h1 {
-                display: none;
-            }
-        }
+      h1 {
+        display: none;
+      }
     }
+  }
 }
