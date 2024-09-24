@@ -186,11 +186,13 @@ section.carousel ul.dots li.active {
 section.nouveaute {
   margin: 3em 2em 3em 2em;
 }
+section.nouveaute h2 {
+  margin-bottom: 1em;
+}
 section.nouveaute article.container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
-  justify-content: center;
+  justify-content: space-between;
 }
 section.nouveaute article.container div.card {
   border: 1px #000 solid;
@@ -204,10 +206,14 @@ section.nouveaute article.container div.card div.cardContent img.preview {
   height: 23em;
   width: 100%;
 }
+section.nouveaute article.container div.card div.cardContent h3 {
+  font-weight: 300;
+}
 section.nouveaute article.container div.card div.cardContent p {
   color: #d71c10;
   font-family: "Oswald";
   font-size: 2.25rem;
+  font-weight: 100;
 }
 section.nouveaute article.container div.card div.cardContent div.btn {
   display: flex;
@@ -237,22 +243,92 @@ section.nouveaute article.container div.card div.cardContent div.btn #btnShop im
   object-fit: cover;
 }
 
-@media screen and (max-width: 1080px) {
-  header nav.navbar {
-    padding: 0 1em 0 1em;
-    background-color: #fff;
+/* @media screen and (max-width: 1008px) {
+  header {
+    nav.navbar {
+      padding: 0 1em 0 1em;
+      background-color: #fff;
+      display: flex;
+      text-align: center;
+      align-items: center;
+
+      img {
+        height: 30px;
+      }
+
+      img.iconLogo {
+        height: 3rem;
+        width: auto;
+      }
+
+      h1 {
+        display: none;
+      }
+    }
+  }
+}
+
+section.nouveaute {
+  article.container {
     display: flex;
-    text-align: center;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    div.card {
+      border: 1px #000 solid;
+      height: 33em;
+      width: 17.188em;
+      div.cardContent {
+        padding: 1em;
+
+        img.preview {
+          height: 23em;
+          width: 100%;
+        }
+
+        h3 {
+          font-weight: 300;
+        }
+
+        p {
+          color: $tertiary;
+          font-family: "Oswald";
+          font-size: $h2-font-size;
+          font-weight: 100;
+        }
+
+        div.btn {
+          display: flex;
+          justify-content: space-between;
+          div.colors {
+            [id^="btn"] {
+              height: 15px;
+              width: 15px;
+            }
+
+            #btnWhite {
+              background-color: #fff;
+            }
+            #btnBlack {
+              background-color: #000;
+            }
+            #btnRed {
+              background-color: $tertiary;
+            }
+          }
+
+          #btnShop {
+            height: 15px;
+            width: 25px;
+            img {
+              height: 100%;
+              width: auto;
+              -o-object-fit: cover;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
   }
-  header nav.navbar img {
-    height: 30px;
-  }
-  header nav.navbar img.iconLogo {
-    height: 3rem;
-    width: auto;
-  }
-  header nav.navbar h1 {
-    display: none;
-  }
-}/*# sourceMappingURL=style.css.map */
+}
+*//*# sourceMappingURL=style.css.map */

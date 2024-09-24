@@ -217,12 +217,13 @@ section.carousel {
 
 section.nouveaute {
   margin: 3em 2em 3em 2em;
+  h2 {
+    margin-bottom: 1em;
+  }
   article.container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
-    justify-content: center;
-
+    justify-content: space-between;
     div.card {
       border: 1px #000 solid;
       height: 33em;
@@ -235,10 +236,15 @@ section.nouveaute {
           width: 100%;
         }
 
+        h3 {
+          font-weight: 300;
+        }
+
         p {
           color: $tertiary;
           font-family: "Oswald";
           font-size: $h2-font-size;
+          font-weight: 100;
         }
 
         div.btn {
@@ -277,7 +283,7 @@ section.nouveaute {
   }
 }
 
-@media screen and (max-width: 1080px) {
+/* @media screen and (max-width: 1008px) {
   header {
     nav.navbar {
       padding: 0 1em 0 1em;
@@ -301,3 +307,68 @@ section.nouveaute {
     }
   }
 }
+
+section.nouveaute {
+  article.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    div.card {
+      border: 1px #000 solid;
+      height: 33em;
+      width: 17.188em;
+      div.cardContent {
+        padding: 1em;
+
+        img.preview {
+          height: 23em;
+          width: 100%;
+        }
+
+        h3 {
+          font-weight: 300;
+        }
+
+        p {
+          color: $tertiary;
+          font-family: "Oswald";
+          font-size: $h2-font-size;
+          font-weight: 100;
+        }
+
+        div.btn {
+          display: flex;
+          justify-content: space-between;
+          div.colors {
+            [id^="btn"] {
+              height: 15px;
+              width: 15px;
+            }
+
+            #btnWhite {
+              background-color: #fff;
+            }
+            #btnBlack {
+              background-color: #000;
+            }
+            #btnRed {
+              background-color: $tertiary;
+            }
+          }
+
+          #btnShop {
+            height: 15px;
+            width: 25px;
+            img {
+              height: 100%;
+              width: auto;
+              -o-object-fit: cover;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+*/
